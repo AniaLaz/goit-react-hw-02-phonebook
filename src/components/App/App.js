@@ -8,8 +8,6 @@ import css from 'components/App/App.module.css';
 export class App extends Component {
   state = {
     contacts: [],
-    name: '',
-    number: '',
     filter: '',
   };
 
@@ -25,7 +23,7 @@ export class App extends Component {
     } else {
       this.addalert();
     }
-  };
+  };n
 
   addalert = name => {
     window.alert(`${name} is already in contacts`);
