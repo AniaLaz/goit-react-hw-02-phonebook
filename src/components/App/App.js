@@ -20,15 +20,15 @@ export class App extends Component {
       contacts: [...prevState.contacts, { id: nanoid(), name, number }],
     }));
     const Arr = this.getContact();
-    Arr.map(contact => {
-      const ollName = contact.name;
-      if (ollName === name) {
-        return this.addalert(name);
-        // this.setState(prevState => ({
-        //   contacts: [...prevState.contacts],
-        // }));
-      }       
-    });
+    // Arr.map(contact => {
+    //   const ollName = contact.name;
+    //   if (ollName === name) {
+    //     this.addalert(name);
+    //     // this.setState(prevState => ({
+    //     //   contacts: [...prevState.contacts],
+    //     // }));
+    //   }       
+    // });
   };
 
   addalert = name => {
