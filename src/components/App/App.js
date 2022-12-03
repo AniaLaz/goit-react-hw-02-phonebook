@@ -19,16 +19,16 @@ export class App extends Component {
     this.setState(prevState => ({
       contacts: [...prevState.contacts, { id: nanoid(), name, number }],
     }));
-    // const Arr = this.getContact();
-    // Arr.map(contact => {
-    //   const ollName = contact.name;
-    //   if (ollName === name) {
-    //     this.addalert(name);
-    //     this.setState(prevState => ({
-    //       contacts: [...prevState.contacts],
-    //     }));
-    //   }       
-    // });
+    const Arr = this.getContact();
+    Arr.map(contact => {
+      const ollName = contact.name;
+      if (ollName === name) {
+        this.addalert(name);
+        // this.setState(prevState => ({
+        //   contacts: [...prevState.contacts],
+        // }));
+      }       
+    });
   };
 
   addalert = name => {
