@@ -1,3 +1,5 @@
+import css from 'components/Form/Form.module.css';
+
 const Form = ({ onSubmit }) => {
   const handleSubmit = event => {
     event.preventDefault();
@@ -7,9 +9,9 @@ const Form = ({ onSubmit }) => {
     number.value = '';
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name
+    <form onSubmit={handleSubmit} className={css.form}>
+      <label className={css.labelName}>
+        <span className={css.spanName}>Name</span>
         {/* <FormInput /> */}
         <input
           type="text"
@@ -19,8 +21,8 @@ const Form = ({ onSubmit }) => {
           required
         />
       </label>
-      <label>
-        Namber
+      <label className={css.labelNamber}>
+        <span className={css.spanNamber}>Namber</span>
         <input
           type="tel"
           name="number"
@@ -29,7 +31,9 @@ const Form = ({ onSubmit }) => {
           required
         />
       </label>
-      <button type="submit">Add contact</button>
+      <button type="submit" className={css.buttonAdd}>
+        Add contact
+      </button>
     </form>
   );
 };

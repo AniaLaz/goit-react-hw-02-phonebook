@@ -1,16 +1,20 @@
-import { nanoid } from 'nanoid';
-const Contacts = ({ items, onDelete }) => {
+import css from 'components/Contacts/Contacts.module.css';
+const Contacts = ({  onDelete, visibleArr }) => {
   return (
-    <ul>
-      {items.map(item => {
+    <ul className={css.list}>
+      {visibleArr.map(item => {
         return (
-          <li key={item.id} id={item.id}>
-            <div>
-              <p> {item.name}:</p>
-              <p> {item.number}</p>
+          <li className={css.item} key={item.id} id={item.id}>
+            <div className={css.itemContent}>
+              {item.name}: {item.number}
             </div>
 
-            <button onClick={() => onDelete(item.id)}>Delete</button>
+            <button
+              className={css.buttonDelete}
+              onClick={() => onDelete(item.id)}
+            >
+              Delete
+            </button>
           </li>
         );
       })}
