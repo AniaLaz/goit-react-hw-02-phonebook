@@ -23,7 +23,7 @@ export class App extends Component {
     Arr.map(contact => {
       const ollName = contact.name;
       if (ollName === name) {
-        this.addalert(name);
+        return this.addalert(name);
         // this.setState(prevState => ({
         //   contacts: [...prevState.contacts],
         // }));
